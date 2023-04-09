@@ -12,4 +12,4 @@ config = {
 }
 
 ## Enter your Open API Key here
-OPENAI_API_KEY = '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'
+OPENAI_API_KEY = ''
