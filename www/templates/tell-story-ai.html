@@ -1,0 +1,53 @@
+{% extends 'includes/layout.html' %}
+
+
+{% block body %}
+<main class="container">
+  <div class="bg-light p-5 rounded mt-5">
+    <h1>AI Tell a Story</h1>
+    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate neque eos impedit laborum ea perferendis modi qui provident laudantium quidem similique, minus ab praesentium iste cupiditate id suscipit incidunt dolore?</p>
+
+    <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+
+    <form class="" action="/tell-story-ai" method="post">
+
+      <div class="mb-3">
+        <label class="form-label">Lorem, ipsum.</label>
+        <input type="text" class="form-control" name="tellStoryForm" placeholder="Start a story">
+        <div class="form-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem, sed!</div>
+        <div id="accordion">
+
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <p>Advanced Options</p>
+              </h5>
+            </div>
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                <label class="form-label">Who ?</label>
+                <input type="text" class="form-control" name="tellStoryForm-who" placeholder="Start a story"> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-lg"> Send </button>
+
+    </form>
+  </div>
+
+  <div class="p-3 rounded">
+    <div class="row">
+      <div class="col-lg-12">
+        <h3 class="text-primary">prompt : {{prompt}}</h3>
+        <p class="lead">openAIAnswer : {{openAIAnswer}}</p>
+        <p class="lead">query : {{query2}}</p>
+        <p class="lead">data : {{data}}</p>
+        <p class="lead">actors : {{actors}}</p>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

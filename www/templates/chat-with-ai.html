@@ -1,0 +1,59 @@
+{% extends 'includes/layout.html' %} {% block body %}
+<main class="container">
+  <div class="bg-light p-5 rounded mt-5">
+    <h1>Chat with AI</h1>
+    <p class="lead">
+    </p>
+
+    <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+    <p class="lead">Query : {{query}}</p>
+
+    <form class="" action="/chat-with-ai" method="post">
+      <div class="mb-3">
+        <label class="form-label">Lorem, ipsum.</label>
+        <input
+          type="text"
+          class="form-control"
+          name="tellStoryForm"
+          placeholder="Start a story"
+        />
+        <div class="form-text">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem, sed!
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-lg">Send</button>
+    </form>
+  </div>
+
+  <div class="p-3 rounded">
+    <div class="row">
+      <div class="col-lg-12">
+        <h3 class="text-primary">{{answer}}</h3>
+        <ul class="msg-container">
+          {% for chat_log in chat_logs %}
+            <li class="msg-item">{{chat_log}}</li>
+          {% endfor %}
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</main>
+<style>
+  .msg-container {
+    list-style: none;
+  }
+  .msg-item {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+  }
+
+  .msg-item:nth-child(2n+1) {
+    background-color: #eee;
+    text-align: end;
+
+  }
+</style>
+{% endblock %}
